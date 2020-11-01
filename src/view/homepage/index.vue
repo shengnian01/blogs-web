@@ -42,12 +42,21 @@
 				<el-input v-show="search_input" v-model="input" @change="search" ></el-input>
 				<i v-show="!search_input" style="margin-top: 10px;" class="el-icon-user-solid" ></i>
 				<span v-show="!search_input" style="color:rgb(69,133,245);margin-top: 10px;margin-right: 18px;">投稿</span>
+				<svg v-show="!search_input" class="icon" aria-hidden="true">
+					<use xlink:href="#icon084tuichu"></use>
+				</svg>
+				<span v-show="!search_input" style="color:rgb(69,133,245);margin-top: 10px;margin-right: 18px;">登录</span>
 			</span>
 			</div>
 			<div class="content">
-				<div class="adv"></div>
-				<contented></contented>
-				<h1>kjklk</h1>
+				<div class="adv"><contented></contented></div>
+				<!-- <div class="content_left">
+					<div class="adv"><contented></contented></div>
+				</div> -->
+				<!-- <div class="content_right">111111</div> -->
+				
+				
+				
 			</div>
 			
 
@@ -56,6 +65,7 @@
 <script>
 	import {adminaudit} from '@/api/homepage'
 	import contented from '../../components/content.vue'
+	
 	export default {
 		components:{
 			contented
@@ -146,11 +156,22 @@
 	.content{
 		margin-left: 62px;
 		margin-right: 62px;
-		background-color: #0000FF;
+		/* background-color: #0000FF; */
 	}
 	.adv{
 		height: 300px;
 		width: 860px;
 		background-color: #0086B3;
+	}
+	.content_left{
+		width: 860px;
+		height: auto;
+		float: left;
+	}
+	.content_right{
+		width: 356px;
+		height: auto;
+		float: right;
+		background-color: #55A532;
 	}
 </style>
