@@ -32,7 +32,7 @@
           <el-menu-item index="6">赞助作者</el-menu-item>
           <el-menu-item index="7">技术交流</el-menu-item>
           <el-menu-item index="8">项目合作</el-menu-item>
-          <el-menu-item index="9" style="float: right;margin-right: 62px;"><svg class="icon" aria-hidden="true">
+          <el-menu-item v-on:click="showSearch" style="float: right;margin-right: 62px;"><svg class="icon" aria-hidden="true">
               <use xlink:href="#iconsousuo"></use>
             </svg></el-menu-item>
         </el-menu>
@@ -72,13 +72,17 @@
     },
     methods: {
       handleSelect(key, keyPath) {
+        console.log(123)
         console.log(key, keyPath);
-        if (key == 9) {
-          this.search_input = true;
+        // if (key == 9) {
+        //   this.search_input = true;
 
-        } else {
-          this.search_input = false;
-        }
+        // } else {
+        //   this.search_input = false;
+        // }
+      },
+      showSearch() {
+        this.search_input = true;
       },
       search() {
         console.log(111)
@@ -147,6 +151,4 @@
     margin-left: 62px;
     margin-right: 62px;
   }
-
-
 </style>
