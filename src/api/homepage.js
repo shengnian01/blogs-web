@@ -3,7 +3,7 @@ import qs from 'qs'
 
 export function adminaudit(param) {
   return request({
-    url: '/user/getUser',
+    url: '/api/user/getUser',
     method: 'GET',
 		param
   })

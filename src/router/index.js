@@ -18,16 +18,17 @@ export default new Router({
       name:'homepage',
       component: homepage,
       children:[
-        {
-          path:'/head',
-          name:'head',
-          component:head
-        },
-        {
-          path:'/java',
-          name:'java',
-          component:java
-          
+
+         {
+         path:'/java',
+         name:'java',
+         component:java
+
+         },
+         {
+            path:'/head',
+            name:'head',
+            component:head
           }
       ]
     },
